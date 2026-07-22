@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve manifest
+        run: |
+          echo "ecosystem: maven"
+          ls -la
+      - name: Build
+        run: echo "build ok"
+      - name: Test
+        run: echo "tests ok"

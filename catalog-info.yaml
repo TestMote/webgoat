@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: webgoat
+  description: Seeded component for asset inventory testing
+  annotations:
+    github.com/project-slug: TestMote/webgoat
+  tags:
+    - maven
+    - tier-1
+spec:
+  type: service
+  lifecycle: production
+  owner: payments
+  system: testmote-platform
